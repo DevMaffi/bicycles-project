@@ -12,3 +12,11 @@ mixin head({ title=projectName, favicon=faviconUrl } = {})
     block links
 
     title= title
+
+mixin socialLins({ list, light=true, start=false } = {})
+  -let classes = "link-up d-inline-block p-0 nav-link"
+
+  each link, i in list
+    li.nav-item
+      a(class=`${classes} ${i === 0 && start ? 'me-2' : 'mx-2'} ${light ? 'link-light' : 'link-dark'}` href=`${link.url}`)
+        i(class=`fs-5 ${link.icon}`)

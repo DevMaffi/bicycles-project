@@ -1,0 +1,30 @@
+// OUR TEAM
+section.py-5.bg-dark.text-light#ourteam
+
+  // CONTAINER
+  .container.mb-5
+    h3.mt-5.mb-3.text-center.text-uppercase Our team
+
+    p.mb-5.text-center.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+
+    // ROW
+    .row.g-5
+      each card in teamCards
+        .col-md-6.col-xl-4.col-xxl-3
+
+          // CARD 
+          .team__card.card.mx-auto.bg-secondary.text-center
+
+            // CARD BODY
+            .card-body
+              img.rounded-circle.mb-3(src=`https://randomuser.me/api/portraits/${card.imgUrl}` alt="portrait")
+
+              h5.card-title.mb-3= card.name
+
+              p.card-text.mb-3= card.descr
+
+              ul.nav.justify-content-center.mb-3
+                +socialLins({ list: socialIcons })
+
+              button.btn.btn-dark.mb-3(type="button") Say Hello
