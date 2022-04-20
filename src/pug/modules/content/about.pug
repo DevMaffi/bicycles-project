@@ -7,24 +7,24 @@ section.py-5.bg-dark.text-center.text-sm-start.text-light#aboutus
 
       // ABOUT DATA
       .about__data.mt-xl-5.me-sm-5
-        span.d-inline-block.mb-2.text-white-50 Bicycles - Sport - Trek - Madone SLR
+        span.d-inline-block.mb-2.text-white-50(data-aboutus-subtitle) Bicycles - Sport - Trek - Madone SLR
 
-        h1.text-uppercase
+        h1.text-uppercase(data-aboutus-title)
           |2019 Trek 
           br
           span.text-warning Madone SLR
 
-        span.d-inline-block.mb-4.fs-5.fw-bolder Just for $2190
+        span.d-inline-block.mb-4.fs-5.fw-bolder(data-aboutus-price) Just for $2190
 
-        p.mb-5.
+        p.mb-5(data-aboutus-text).
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe modi consectetur aut distinctio beatae molestias repellendus aperiam laboriosam perspiciatis. Animi, sint.
 
-        button.btn.btn-secondary.d-flex.align-items-center.mx-auto.mx-sm-0.text-uppercase(type="button" data-bs-toggle="modal" data-bs-target="#order")
+        button.btn.btn-secondary.d-flex.align-items-center.mx-auto.mx-sm-0.text-uppercase(type="button" data-bs-toggle="modal" data-bs-target="#order" data-aboutus-button)
           i.ri-shopping-cart-fill.me-1
           |Make order
 
       // CAROUSEL
-      .carousel.slide.d-none.d-sm-block.mt-5.mt-lg-0.w-100#about-carousel(data-bs-ride='carousel')
+      .carousel.slide.d-none.d-sm-block.mt-5.mt-lg-0.w-100#about-carousel(data-bs-ride='carousel' data-aboutus-carousel)
 
         // CAROUSEL INNER
         .carousel-inner

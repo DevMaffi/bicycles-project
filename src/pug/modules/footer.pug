@@ -8,7 +8,7 @@ footer.pt-5.bg-dark.text-light
     .row.mb-5
 
       // FOOTER COMPANY
-      .col-xl-4
+      .col-xl-4(data-footer-section)
         h3.mb-3= companyName
 
         p
@@ -20,7 +20,7 @@ footer.pt-5.bg-dark.text-light
 
       each section in footerSections
         // FOOTER SECTION
-        .col-xl.mt-5.mt-xl-0
+        .col-xl.mt-5.mt-xl-0(data-footer-section)
           h5.mb-3.text-capitalize= section.title
 
           if section.links

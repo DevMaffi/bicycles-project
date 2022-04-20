@@ -4,7 +4,7 @@
 import 'bootstrap'
 import mixitup from 'mixitup'
 
-import { handleScroll } from '@modules'
+import { handleScroll, applyReveal } from '@modules'
 
 // styles
 import '@sass/styles'
@@ -23,3 +23,7 @@ mixitup('[data-products-container]', {
     duration: 300,
   },
 })
+
+// Scroll reveal
+
+applyReveal()

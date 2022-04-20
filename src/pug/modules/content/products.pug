@@ -6,7 +6,7 @@ section.py-5#ourproducts
     h3.my-5.text-center.text-uppercase Our products
 
     // FILTERS
-    .product__filters.d-flex.justify-content-sm-center.flex-wrap.mx-auto.mx-sm-0.mb-5
+    .product__filters.d-flex.justify-content-sm-center.flex-wrap.mx-auto.mx-sm-0.mb-5(data-products-filters)
       each filter in productsFilters
         button.btn.btn-outline-secondary.mx-2.mb-2.mb-sm-0(type="button" data-filter=`${filter.type}`)= filter.text
 
@@ -16,7 +16,7 @@ section.py-5#ourproducts
         div(class=`mix ${card.category} col-md-6 col-lg-4 col-xxl-3` data-products-card-container)
 
           // CARD 
-          .products__card.card.mx-auto.position-relative
+          .products__card.card.mx-auto.position-relative(data-products-card)
             .bg-image.overflow-hidden
               img.products__card-img.card-img-top(src=`@img/${card.img}` alt='bike')
 
