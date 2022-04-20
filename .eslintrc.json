@@ -46,6 +46,7 @@
     "import/extensions": 0,
     "import/newline-after-import": 1,
     "import/no-duplicates": 1,
+    "import/no-extraneous-dependencies": 0,
     "import/no-unresolved": 0,
     "import/prefer-default-export": 0,
     "indent": 0,

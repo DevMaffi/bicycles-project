@@ -11,9 +11,9 @@ section.py-5#ourproducts
         button.btn.btn-outline-secondary.mx-2.mb-2.mb-sm-0(type="button" data-filter=`${filter.type}`)= filter.text
 
     // ROW
-    .row.g-5
+    .row.g-5(data-products-container)
       each card in productCards
-        div(class=`${card.category} col-md-6 col-lg-4 col-xxl-3`)
+        div(class=`mix ${card.category} col-md-6 col-lg-4 col-xxl-3` data-products-card-container)
 
           // CARD 
           .products__card.card.mx-auto.position-relative
