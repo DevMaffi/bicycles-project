@@ -1,2 +1,39 @@
 // FOOTER
-footer.footer
+footer.pt-5.bg-dark.text-light
+
+  // CONTAINER
+  .container
+
+    // ROW
+    .row.mb-5
+
+      // FOOTER COMPANY
+      .col-xl-4
+        h3.mb-3= companyName
+
+        p
+          |Lorem ipsum dolor, sit amet consecte 
+          br
+          |elit. Velit porro dolor, perferendis nobis
+          br
+          |sed voluptates minus. Similique!
+
+      each section in footerSections
+        // FOOTER SECTION
+        .col-xl.mt-5.mt-xl-0
+          h5.mb-3.text-capitalize= section.title
+
+          if section.links
+            // FOOTER LINKS
+            ul.nav.flex-column
+              each link in section.links
+                li.nav-item
+                  a.link-right.my-2.p-0.nav-link.link-light(href='#')= link
+
+          if section.social
+            // FOOTER SOCIAL
+            ul.nav
+              +socialLins({ list: section.social, start: true })
+
+    // COPYRIGHT
+    span.d-block.pt-5.pb-4.text-center.text-secondary &copy; #{new Date().getFullYear()} #{companyName}. All rights reserved
