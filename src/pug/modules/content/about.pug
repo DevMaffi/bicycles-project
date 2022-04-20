@@ -1,0 +1,33 @@
+// ABOUT US
+section.py-5.bg-dark.text-center.text-sm-start.text-light#aboutus
+
+  // CONTAINER
+  .container.mb-5
+    .d-sm-flex.flex-sm-column.flex-lg-row
+
+      // ABOUT DATA
+      .about__data.mt-xl-5.me-sm-5
+        span.d-inline-block.mb-2.text-white-50 Bicycles - Sport - Trek - Madone SLR
+
+        h1.text-uppercase
+          |2019 Trek 
+          br
+          span.text-warning Madone SLR
+
+        span.d-inline-block.mb-4.fs-5.fw-bolder Just for $2190
+
+        p.mb-5.
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe modi consectetur aut distinctio beatae molestias repellendus aperiam laboriosam perspiciatis. Animi, sint.
+
+        button.btn.btn-secondary.d-flex.align-items-center.mx-auto.mx-sm-0.text-uppercase(type="button" data-bs-toggle="modal" data-bs-target="#order")
+          i.ri-shopping-cart-fill.me-1
+          |Make order
+
+      // CAROUSEL
+      .carousel.slide.d-none.d-sm-block.mt-5.mt-lg-0.w-100#about-carousel(data-bs-ride='carousel')
+
+        // CAROUSEL INNER
+        .carousel-inner
+          each imgUrl, i in aboutCarouselImages
+            div(class=`carousel-item ${i === 0 ? 'active' : ''}`)
+              img.img-fluid(src=`@img/${imgUrl}` alt='bike image')
