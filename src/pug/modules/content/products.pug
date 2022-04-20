@@ -1,0 +1,35 @@
+// PRODUCTS
+section.py-5#ourproducts
+
+  // CONTAINER
+  .container.mb-5
+    h3.my-5.text-center.text-uppercase Our products
+
+    // FILTERS
+    .product__filters.d-flex.justify-content-sm-center.flex-wrap.mx-auto.mx-sm-0.mb-5
+      each filter in productsFilters
+        button.btn.btn-outline-secondary.mx-2.mb-2.mb-sm-0(type="button" data-filter=`${filter.type}`)= filter.text
+
+    // ROW
+    .row.g-5
+      each card in productCards
+        div(class=`${card.category} col-md-6 col-lg-4 col-xxl-3`)
+
+          // CARD 
+          .products__card.card.mx-auto.position-relative
+            .bg-image.overflow-hidden
+              img.products__card-img.card-img-top(src=`@img/${card.img}` alt='bike')
+
+            // CARD BODY
+            .card-body
+              if card.sale
+                span.badge.bg-warning.mt-2.me-2.text-dark.position-absolute.top-0.end-0 Sale
+
+              .d-flex.align-items-center.mb-3
+                h5.card-title.d-flex.align-item-center.mb-0.fw-bolder
+                  |#{card.title}
+                p.card-text.ms-2.lead.text-warning $#{card.price}
+
+              p.card-text.mb-4= card.descr
+
+              button.btn.btn-secondary(type="button") More info
