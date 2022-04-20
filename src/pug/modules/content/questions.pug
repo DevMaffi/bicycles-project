@@ -1,0 +1,21 @@
+// QUESTIONS
+section.py-5#questions
+
+  // CONTAINER
+  .container.mb-5
+    h3.my-5.text-center.text-uppercase Frequently asked questions
+
+    // ACCORDION
+    .accordion.accordion-flush#questions-accordion
+
+      each question, i in questions 
+        // ACCORDION ITEM
+        .accordion-item
+
+          // ACCORDION HEADER
+          h2.accordion-header
+            button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target=`#question-${i}`)= question.title
+
+          // ACCORDION COLLAPSE
+          .accordion-collapse.collapse(id=`question-${i}` data-bs-parent='#questions-accordion')
+            .accordion-body= question.descr
