@@ -4,13 +4,14 @@
 import 'bootstrap'
 import mixitup from 'mixitup'
 
-import { handleScroll, applyReveal } from '@modules'
+import { handleForm, handleScroll, applyReveal } from '@modules'
 
 // styles
 import '@sass/styles'
 
 // Setup handlers
 
+handleForm()
 handleScroll()
 
 // Mixer init

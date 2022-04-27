@@ -82,6 +82,7 @@
     "prefer-const": 1,
     "prefer-destructuring": 1,
     "prefer-template": 1,
+    "quote-props": 0,
     "quotes": 1,
     "semi": 0,
     "space-before-blocks": 0,
